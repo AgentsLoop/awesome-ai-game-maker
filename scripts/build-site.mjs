@@ -163,6 +163,7 @@ const indexBody = [
   '<section class="hero">',
   '<a href="poster.html"><img src="svg/poster.svg" alt="Awesome AI Game Maker poster: a robot maker in a neon workshop beside a holographic game diorama"></a>',
   '<p class="note">Animated poster with seven parallax layers. <a href="poster.html">Open the interactive poster</a> for pointer parallax, layer toggles, and pause controls.</p>',
+  '<p class="note">Transparent vector variant: <a href="svg/poster-unslop.svg">light ink</a> &middot; <a href="svg/poster-unslop-ink-dark.svg">dark ink</a> &middot; <a href="poster.html#transparent-variant">controls on the poster page</a>.</p>',
   '</section>',
   indexParsed.html,
 ].join('\n');
