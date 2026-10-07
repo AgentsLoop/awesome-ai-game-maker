@@ -14,6 +14,11 @@
 - Keep the README comparison table, the feature checklist, and the games.md catalog in one tool order.
 - Regenerate or edit both files when a tool order or tool set changes.
 
+## Site
+
+- Rebuild the published pages with node scripts/build-site.mjs after every README.md or games.md change, then commit index.html, games.html, and poster.html.
+- GitHub Pages serves the repository root of main, so the pages load svg/poster.svg directly.
+
 ## Poster
 
 - Rebuild the animated poster with node svg/embed-assets.mjs svg/poster.template.svg svg/assets.json svg/poster.svg.
