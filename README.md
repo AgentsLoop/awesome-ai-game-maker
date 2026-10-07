@@ -1,5 +1,9 @@
 # Awesome AI Game Maker
 
+<a href="https://github.com/AgentsLoop/awesome-ai-game-maker"><img src="svg/poster.svg" alt="Awesome AI Game Maker: a robot maker in a neon workshop beside a holographic game diorama" width="100%" /></a>
+
+Open [the interactive poster preview](svg/preview.html) for pointer parallax, layer toggles, and pause controls. An image tag plays the loop on its own but cannot run the pointer parallax.
+
 > Index AI game generators, AI-assisted engines, and asset or publishing services here, with verified example games for each tool. Treat every capability as a vendor or project claim unless this index states that it was independently tested.
 
 Keep tool entries separate from playable-game datasets such as [awesome-opus-5.5-games](https://github.com/AgentsLoop/awesome-opus-5.5-games). Verify counts and links before every revision. Last checked **2026-10-07**.

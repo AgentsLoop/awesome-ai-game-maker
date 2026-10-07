@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome AI Game Maker — poster preview</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #05060f; color: #dce6ff; font: 16px/1.5 Arial, Helvetica, sans-serif; }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 16px 20px; border-bottom: 1px solid #1b2440; }
+  h1 { font-size: 18px; margin: 0 12px 0 0; letter-spacing: .04em; }
+  button, select { background: #121b33; color: #dce6ff; border: 1px solid #2b3c66; border-radius: 8px; padding: 7px 12px; font: inherit; cursor: pointer; }
+  button[aria-pressed="true"] { background: #1d3a63; border-color: #4fd8ff; }
+  main { padding: 18px 20px 28px; }
+  #stage { position: relative; max-width: 1600px; border: 1px solid #1b2440; border-radius: 14px; overflow: hidden; background: #05060f; }
+  #stage object { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+  .layers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  label.chip { display: inline-flex; gap: 6px; align-items: center; background: #0e1730; border: 1px solid #24345a; border-radius: 999px; padding: 6px 12px; }
+  .note { color: #93a7d4; max-width: 900px; margin-top: 14px; }
+  .state { color: #7ef0ff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Awesome AI Game Maker — poster preview</h1>
+  <span class="state" id="state">loading</span>
+</header>
+<main>
+  <div id="stage" aria-live="polite"></div>
+  <div class="controls">
+    <button id="play" aria-pressed="true">Play</button>
+    <button id="pause" aria-pressed="false">Pause</button>
+    <button id="parallax" aria-pressed="true">Pointer parallax</button>
+    <label>Strength <input id="strength" type="range" min="0" max="2" step="0.1" value="1"></label>
+    <button id="reset">Reset layers</button>
+  </div>
+  <div class="layers" id="layers"></div>
+  <p class="note">The exported poster.svg autoplays on its own and keeps its motion opt-in, so an <code>&lt;img&gt;</code> tag plays the loop but cannot run the pointer parallax. Use this preview, an inline SVG, or an <code>&lt;object&gt;</code> when you want the interaction. Under reduced motion this preview starts paused until you press Play.</p>
+</main>
+<script>
+  const stage = document.getElementById('stage');
+  const stateEl = document.getElementById('state');
+  const playBtn = document.getElementById('play');
+  const pauseBtn = document.getElementById('pause');
+  const parallaxBtn = document.getElementById('parallax');
+  const strengthInput = document.getElementById('strength');
+  const resetBtn = document.getElementById('reset');
+  const layersEl = document.getElementById('layers');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let object = null;
+  let controls = null;
+  let forcedPause = false;
+
+  function setState(text) { stateEl.textContent = text; }
+
+  async function load() {
+    const response = await fetch('poster.svg');
+    let svgText = await response.text();
+    forcedPause = reduced.matches;
+    if (forcedPause) svgText = svgText.replace('data-motion="enabled"', 'data-motion="preview-paused"');
+    const url = URL.createObjectURL(new Blob([svgText], { type: 'image/svg+xml' }));
+    stage.innerHTML = '';
+    object = document.createElement('object');
+    object.type = 'image/svg+xml';
+    object.data = url;
+    object.setAttribute('aria-label', 'Awesome AI Game Maker animated poster');
+    object.addEventListener('load', () => {
+      const win = object.contentWindow;
+      controls = win && win.sceneControls;
+      if (!controls) { setState('SVG loaded; controls unavailable'); return; }
+      if (forcedPause) controls.pause(true);
+      setState(forcedPause ? 'paused for reduced motion — press Play' : 'playing');
+      playBtn.setAttribute('aria-pressed', String(!forcedPause));
+      pauseBtn.setAttribute('aria-pressed', String(forcedPause));
+      controls.layers.forEach((layer) => {
+        const label = document.createElement('label');
+        label.className = 'chip';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.checked = true;
+        input.addEventListener('change', () => controls.layer(layer.id, input.checked));
+        label.append(input, document.createTextNode(layer.label + ' (' + layer.depth + ')'));
+        layersEl.append(label);
+      });
+    });
+    stage.append(object);
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (!controls) return;
+    if (forcedPause) {
+      forcedPause = false;
+      object.contentDocument.documentElement.setAttribute('data-motion', 'enabled');
+    }
+    controls.pause(false);
+    setState('playing');
+    playBtn.setAttribute('aria-pressed', 'true');
+    pauseBtn.setAttribute('aria-pressed', 'false');
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    if (!controls) return;
+    controls.pause(true);
+    setState('paused');
+    playBtn.setAttribute('aria-pressed', 'false');
+    pauseBtn.setAttribute('aria-pressed', 'true');
+  });
+
+  parallaxBtn.addEventListener('click', () => {
+    if (!controls) return;
+    const next = parallaxBtn.getAttribute('aria-pressed') !== 'true';
+    controls.parallax(next);
+    parallaxBtn.setAttribute('aria-pressed', String(next));
+  });
+
+  strengthInput.addEventListener('input', () => { if (controls) controls.strength(strengthInput.value); });
+
+  resetBtn.addEventListener('click', () => {
+    if (!controls) return;
+    controls.layers.forEach((layer) => controls.layer(layer.id, true));
+    layersEl.querySelectorAll('input').forEach((input) => { input.checked = true; });
+    controls.parallax(true);
+    parallaxBtn.setAttribute('aria-pressed', 'true');
+  });
+
+  load().catch((error) => setState('failed: ' + error.message));
+</script>
+</body>
+</html>

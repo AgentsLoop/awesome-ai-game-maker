@@ -1,2 +1,4 @@
 .DS_Store
 *.tmp
+svg/masters/*-crop.png
+svg/masters/*-retina.png

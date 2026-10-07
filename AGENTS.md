@@ -14,6 +14,11 @@
 - Keep the README comparison table, the feature checklist, and the games.md catalog in one tool order.
 - Regenerate or edit both files when a tool order or tool set changes.
 
+## Poster
+
+- Rebuild the animated poster with node svg/embed-assets.mjs svg/poster.template.svg svg/assets.json svg/poster.svg.
+- Keep svg/masters/ as the lossless source, record new prompts in svg/prompts.md, and recheck the preview and the standalone SVG after every poster change.
+
 ## Git
 
 - Commit and push every completed change.
