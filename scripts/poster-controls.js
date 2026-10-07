@@ -73,3 +73,15 @@ resetBtn.addEventListener('click', () => {
   controls.parallax(true);
   parallaxBtn.setAttribute('aria-pressed', 'true');
 });
+
+const variant = document.getElementById('poster-unslop');
+const inkToggle = document.getElementById('ink-toggle');
+if (variant && inkToggle) {
+  inkToggle.addEventListener('click', () => {
+    const next = inkToggle.getAttribute('aria-pressed') !== 'true';
+    const variantControls = variant.contentWindow && variant.contentWindow.sceneControls;
+    if (variantControls) variantControls.ink(next ? 'dark' : 'light');
+    inkToggle.setAttribute('aria-pressed', String(next));
+    inkToggle.textContent = next ? 'Light ink' : 'Dark ink';
+  });
+}

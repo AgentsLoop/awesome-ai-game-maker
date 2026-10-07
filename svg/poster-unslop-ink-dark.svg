@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" style="display:block;width:100%;height:auto" role="img" data-motion="enabled" data-ink="dark" aria-labelledby="unslop-title unslop-desc">
+  <title id="unslop-title">Awesome AI Game Maker — transparent index poster</title>
+  <desc id="unslop-desc">A transparent-background, vector-only poster: the title Awesome AI Game Maker, a specification strip with 16 tools and 111 verified example games, the full tool list with categories, and the GitHub repository mark. Three depth layers drift with the pointer and one accent rule sweeps the sheet. Set data-ink="dark" on the root for dark ink on light surfaces.</desc>
+  <defs>
+    <path id="gh-mark" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+  </defs>
+  <style>
+    :root { --ink:#f4f7ff; --text:#e8eeff; --dim:#9fb2d8; --mono:#7f93bd; --accent:#37d6c3; --rule:#ffffff; }
+    :root[data-ink="dark"] { --ink:#0c1120; --text:#151b2c; --dim:#57678a; --mono:#65769a; --accent:#0f9e8f; --rule:#0c1120; }
+    .sans { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace; }
+    .ink { fill: var(--ink); }
+    .text { fill: var(--text); }
+    .dim { fill: var(--dim); }
+    .mono-c { fill: var(--mono); }
+    .accent { fill: var(--accent); }
+    .rule-c { stroke: var(--rule); }
+    .depth { transform: translate(var(--dx,0px), var(--dy,0px)); }
+    .rule { animation: rule 9s ease-in-out infinite alternate; }
+    .sweep { animation: sweep 7.5s linear infinite; }
+    .dot { animation: dot 4s ease-in-out infinite; }
+    .row { animation: row 8s ease-in-out infinite; }
+    .row:nth-child(2n) { animation-delay: -.6s; }
+    .row:nth-child(3n) { animation-delay: -1.4s; }
+    .row:nth-child(5n) { animation-delay: -2.2s; }
+    @keyframes rule { from { opacity:.12; } to { opacity:.3; } }
+    @keyframes sweep { 0% { transform:translateY(0); opacity:0; } 8% { opacity:.55; } 92% { opacity:.55; } 100% { transform:translateY(452px); opacity:0; } }
+    @keyframes dot { 0%,100% { opacity:.45; } 50% { opacity:1; } }
+    @keyframes row { 0%,100% { opacity:.62; } 50% { opacity:1; } }
+    [data-paused="true"] * { animation-play-state: paused !important; }
+    @media (prefers-reduced-motion:reduce) { :root:not([data-motion="enabled"]) * { animation:none !important; } :root:not([data-motion="enabled"]) .depth { transform:none !important; } }
+  </style>
+  <a href="https://github.com/AgentsLoop/awesome-ai-game-maker" aria-label="Open the Awesome AI Game Maker repository on GitHub">
+    <g id="layer-grid" class="depth" data-depth="0.14" data-label="Grid" pointer-events="none">
+      <g class="rule rule-c" stroke-width="1">
+        <path d="M72 60V840M193 60V840M314 60V840M435 60V840M556 60V840M677 60V840M798 60V840M919 60V840M1040 60V840M1161 60V840M1282 60V840M1403 60V840M1524 60V840"/>
+      </g>
+      <path class="rule-c" d="M72 340H1528M72 452H1528M72 812H1528" stroke-opacity=".3" stroke-width="1"/>
+      <rect class="sweep accent" x="72" y="340" width="1456" height="1"/>
+    </g>
+    <g id="layer-content" class="depth" data-depth="0.5" data-label="Content">
+      <rect class="accent" x="72" y="86" width="12" height="12"/>
+      <text class="mono dim" x="98" y="98" font-size="15" letter-spacing="3.4">AWESOME-AI-GAME-MAKER / INDEX</text>
+      <text class="sans ink" x="72" y="222" font-size="84" font-weight="400" letter-spacing="-.5">AWESOME AI</text>
+      <text class="sans ink" x="72" y="312" font-size="84" font-weight="700" letter-spacing="-.5">GAME MAKER</text>
+      <g class="mono text" font-size="15" letter-spacing="1.6">
+        <text x="72" y="388">16 TOOLS</text>
+        <text x="238" y="388">111 VERIFIED GAMES</text>
+        <text x="508" y="388">7 PARALLAX LAYERS</text>
+        <text x="748" y="388">VERIFIED 2026-10-07</text>
+        <text class="dim" x="1010" y="388">SOURCE: README.MD + GAMES.MD</text>
+      </g>
+      <g class="sans text" font-size="17">
+        <g class="row"><text x="72" y="496">Pixelfork</text><text class="mono mono-c" x="330" y="496" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="536">Rosebud AI</text><text class="mono mono-c" x="330" y="536" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="576">Makko AI</text><text class="mono mono-c" x="330" y="576" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="616">PocketByte</text><text class="mono mono-c" x="330" y="616" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="656">Wanaka</text><text class="mono mono-c" x="330" y="656" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="696">Mindblown</text><text class="mono mono-c" x="330" y="696" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="72" y="736">Spawn</text><text class="mono mono-c" x="330" y="736" font-size="12.5">MULTIPLAYER STUDIO</text></g>
+        <g class="row"><text x="72" y="776">the9bit</text><text class="mono mono-c" x="330" y="776" font-size="12.5">PROMPT-TO-PLAYABLE</text></g>
+        <g class="row"><text x="816" y="496">Gamly</text><text class="mono mono-c" x="1074" y="496" font-size="12.5">WAITLIST</text></g>
+        <g class="row"><text x="816" y="536">Summer Engine</text><text class="mono mono-c" x="1074" y="536" font-size="12.5">AI-ASSISTED ENGINE</text></g>
+        <g class="row"><text x="816" y="576">GDevelop AI Agent</text><text class="mono mono-c" x="1074" y="576" font-size="12.5">AI-ASSISTED ENGINE</text></g>
+        <g class="row"><text x="816" y="616">Buildbox 4</text><text class="mono mono-c" x="1074" y="616" font-size="12.5">AI-ASSISTED ENGINE</text></g>
+        <g class="row"><text x="816" y="656">SpawnForge</text><text class="mono mono-c" x="1074" y="656" font-size="12.5">PRE-LAUNCH</text></g>
+        <g class="row"><text x="816" y="696">Exists</text><text class="mono mono-c" x="1074" y="696" font-size="12.5">UNVERIFIED</text></g>
+        <g class="row"><text x="816" y="736">Genex</text><text class="mono mono-c" x="1074" y="736" font-size="12.5">ASSETS + PUBLISHING</text></g>
+        <g class="row"><text x="816" y="776">OmGithub</text><text class="mono mono-c" x="1074" y="776" font-size="12.5">DISCOVERY + REMIX</text></g>
+      </g>
+      <g class="mono mono-c" font-size="12.5" letter-spacing="1.4">
+        <text x="72" y="470">PROMPT-TO-PLAYABLE / STUDIO</text>
+        <text x="816" y="470">ENGINE / SERVICE / OTHER</text>
+      </g>
+    </g>
+    <g id="layer-marks" class="depth" data-depth="0.88" data-label="GitHub">
+      <g transform="translate(72 828) scale(1.25)" class="ink"><use href="#gh-mark"/></g>
+      <text class="mono text" x="118" y="852" font-size="16" letter-spacing=".6">github.com/AgentsLoop/awesome-ai-game-maker</text>
+      <rect class="rule-c" x="1232" y="826" width="296" height="42" rx="4" fill="none" stroke-opacity=".38"/>
+      <g transform="translate(1252 835)" class="ink"><use href="#gh-mark"/></g>
+      <text class="mono text" x="1288" y="852" font-size="14" letter-spacing="1.6">VIEW ON GITHUB</text>
+      <rect class="dot accent" x="1508" y="844" width="6" height="6"/>
+    </g>
+  </a>
+  <script><![CDATA[
+  (() => {
+    const root = document.documentElement;
+    const layers = [...root.querySelectorAll('.depth')];
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    let targetX = 0, targetY = 0, x = 0, y = 0, raf = 0, enabled = true, strength = 1, paused = false, optedIn = root.dataset.motion === 'enabled';
+    const motionBlocked = () => reduced.matches && !optedIn;
+    function render() {
+      raf = 0;
+      if (motionBlocked() || paused || !enabled) return;
+      x += (targetX - x) * .09;
+      y += (targetY - y) * .09;
+      layers.forEach(layer => {
+        const d = Number(layer.dataset.depth);
+        layer.style.setProperty('--dx', (x * d).toFixed(3) + 'px');
+        layer.style.setProperty('--dy', (y * d).toFixed(3) + 'px');
+      });
+      if (Math.abs(targetX - x) + Math.abs(targetY - y) > .02) raf = requestAnimationFrame(render);
+    }
+    function schedule() { if (!raf && !paused && enabled && !motionBlocked()) raf = requestAnimationFrame(render); }
+    function reset() { targetX = targetY = x = y = 0; layers.forEach(l => { l.style.removeProperty('--dx'); l.style.removeProperty('--dy'); }); }
+    root.addEventListener('pointermove', e => {
+      if (!enabled || paused || motionBlocked()) return;
+      const r = root.getBoundingClientRect();
+      targetX = ((e.clientX - r.left) / r.width - .5) * 30 * strength;
+      targetY = ((e.clientY - r.top) / r.height - .5) * 20 * strength;
+      schedule();
+    });
+    root.addEventListener('pointerleave', () => { targetX = targetY = 0; schedule(); });
+    reduced.addEventListener('change', reset);
+    window.sceneControls = {
+      pause(value) { paused = Boolean(value); if (!paused && reduced.matches) { optedIn = true; root.dataset.motion = 'enabled'; } root.dataset.paused = String(paused); if (!paused) schedule(); },
+      parallax(value) { enabled = Boolean(value); reset(); },
+      strength(value) { strength = Math.max(0, Math.min(2, Number(value) || 0)); reset(); },
+      ink(value) { root.dataset.ink = value === 'dark' ? 'dark' : 'light'; },
+      layer(id, visible) { const layer = layers.find(l => l.id === id); if (layer) layer.style.display = visible ? '' : 'none'; },
+      layers: layers.map(l => ({ id: l.id, label: l.dataset.label, depth: Number(l.dataset.depth) }))
+    };
+  })();
+  ]]></script>
+</svg>

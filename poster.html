@@ -58,6 +58,10 @@ button[aria-pressed="true"] { border-color:var(--cyan); background:#16304f; }
 </div>
 <div id="layers" class="controls"></div>
 <p class="note">Static render: <a href="svg/poster-still.png">poster-still.png</a>. Source: <a href="svg/poster.template.svg">poster.template.svg</a>, prompts in <a href="svg/prompts.md">svg/prompts.md</a>.</p>
+<h2 id="transparent-variant">Transparent vector variant</h2>
+<p>Vector-only with no raster artwork and no background. Light ink suits dark surfaces; dark ink suits light surfaces. The SVG also takes data-ink="dark" on its root, and both settings are exported as transparent PNGs.</p>
+<div class="stage"><object id="poster-unslop" type="image/svg+xml" data="svg/poster-unslop.svg" aria-label="Transparent vector variant of the poster"></object></div>
+<div class="controls"><button id="ink-toggle" aria-pressed="false">Dark ink</button><span class="note">Transparent PNG exports: <a href="svg/poster-unslop.png">light ink</a> &middot; <a href="svg/poster-unslop-ink-dark.png">dark ink</a></span></div>
 <script>
 const object = document.getElementById('poster');
 const stateEl = document.getElementById('state');
@@ -134,6 +138,18 @@ resetBtn.addEventListener('click', () => {
   controls.parallax(true);
   parallaxBtn.setAttribute('aria-pressed', 'true');
 });
+
+const variant = document.getElementById('poster-unslop');
+const inkToggle = document.getElementById('ink-toggle');
+if (variant && inkToggle) {
+  inkToggle.addEventListener('click', () => {
+    const next = inkToggle.getAttribute('aria-pressed') !== 'true';
+    const variantControls = variant.contentWindow && variant.contentWindow.sceneControls;
+    if (variantControls) variantControls.ink(next ? 'dark' : 'light');
+    inkToggle.setAttribute('aria-pressed', String(next));
+    inkToggle.textContent = next ? 'Light ink' : 'Dark ink';
+  });
+}
 </script>
 </main>
 <footer>Built from README.md and games.md by node scripts/build-site.mjs. Repository: <a href="https://github.com/AgentsLoop/awesome-ai-game-maker" target="_blank" rel="noopener">github.com/AgentsLoop/awesome-ai-game-maker</a>. Poster artwork is a hybrid SVG with embedded raster layers.</footer>

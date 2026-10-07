@@ -22,6 +22,7 @@
 ## Poster
 
 - Rebuild the animated poster with node svg/embed-assets.mjs svg/poster.template.svg svg/assets.json svg/poster.svg.
+- Keep the transparent vector variant in svg/poster-unslop.svg with data-ink light or dark; regenerate its PNG exports with the Playwright check, not by hand.
 - Keep svg/masters/ as the lossless source, record new prompts in svg/prompts.md, and recheck the preview and the standalone SVG after every poster change.
 
 ## Git
