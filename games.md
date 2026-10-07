@@ -112,6 +112,21 @@ Primary source: https://www.spawn.co/api/feed?sort=hot (HTTP 200)
 | Slimeling (196 plays) | [Slimeling](https://www.spawn.co/@guzz/slimeling/play) | 200 |
 | Almost Up! (SpawnJam #29 first place) | [Almost Up!](https://www.spawn.co/@medivhus/almost-up/play) | 200 |
 
+## the9bit
+
+The site sitemap listed 25 playable builds on 2026-10-07. The pages publish no per-game titles, so link each build by its identifier.
+
+Primary source: https://the9bit.com/sitemap.xml (HTTP 200)
+
+| Game | Link | Page status |
+| --- | --- | --- |
+| The9 AI Game, build 40e85123 | [build 40e85123](https://the9bit.com/play/40e85123-0d31-44df-85f0-7ff5102dfc05) | 200 |
+| The9 AI Game, build 2cf55670 | [build 2cf55670](https://the9bit.com/play/2cf55670-2e33-4f8c-91ff-5311401c9fe5) | 200 |
+| The9 AI Game, build 02bdb037 | [build 02bdb037](https://the9bit.com/play/02bdb037-87a2-41b2-bdba-c3adc66964a7) | 200 |
+| The9 AI Game, build 1a61624b | [build 1a61624b](https://the9bit.com/play/1a61624b-eb10-44de-ac0e-fe71c8ef51ad) | 200 |
+| The9 AI Game, build 3b4856a9 | [build 3b4856a9](https://the9bit.com/play/3b4856a9-4381-465f-a2c1-2d305ace9be4) | 200 |
+| The9 AI Game, build 50542221 | [build 50542221](https://the9bit.com/play/50542221-017a-4f5c-a48e-6c5c2af8b042) | 200 |
+
 ## Genex
 
 The public gallery API returned 48 listings on 2026-10-07.
@@ -254,3 +269,4 @@ No published example games were found.
 - List a game only when the tool, its organization, or its community page presents that game and the link resolves.
 - Keep engine-built showcase games separate from AI-attributed games; label missing attribution instead of assuming it.
 - Recheck counts and links before each revision and update the checked date.
+- Record why a candidate was excluded in the README Considered and excluded section instead of dropping it silently.
