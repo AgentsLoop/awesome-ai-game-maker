@@ -134,6 +134,20 @@ No published game catalogue was found on 2026-10-07. The product and features pa
 Primary source: https://www.klorv.com/features (HTTP 200)
 
 No published example games were found.
+## Websim
+
+The site sitemap listed 960 URLs on 2026-10-07, of which 947 are user creations at /@user/slug paths; the sample below is verified playable in the browser.
+
+Primary source: https://websim.com/sitemap.xml (HTTP 200) · [what is Websim](https://websim.com/blog/what-is-websim)
+
+| Game | Link | Page status |
+| --- | --- | --- |
+| Sandtris | [Sandtris](https://websim.com/@frogsforever/sandtris) | 200 |
+| This Game Doesnt Exist | [This Game Doesnt Exist](https://websim.com/@KainzYT/this-game-doesnt-exist) | 200 |
+| Eldritch Maze Explorer | [Eldritch Maze Explorer](https://websim.com/@QQQ/eldritch-maze-explorer) | 200 |
+| Infinite Cave Sim | [Infinite Cave Sim](https://websim.com/@SilverXP/infinite-cave-sim) | 200 |
+| Addicted To Shapes | [Addicted To Shapes](https://websim.com/@datboodiebreadham/DootDootLoot) | 200 |
+| Sandspiel | [Sandspiel](https://websim.com/@maxbittker/sandspiel) | 200 |
 ## Genex
 
 The public gallery API returned 48 listings on 2026-10-07.
