@@ -1,4 +1,4 @@
-# Awesome AI Game Generators
+# Awesome AI Game Maker
 
 > Index AI game generators, AI-assisted engines, and asset or publishing services here, with verified example games for each tool. Treat every capability as a vendor or project claim unless this index states that it was independently tested.
 
