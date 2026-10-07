@@ -93,6 +93,25 @@ Primary source: https://mindblown.ai/sitemap.xml (HTTP 200)
 | Sinking City Remix | [Sinking City Remix](https://mindblown.ai/games/sinking-city-remix) | 200 |
 | Hamster Havoc | [Hamster Havoc](https://mindblown.ai/games/hamster-havoc) | 200 |
 
+## Spawn
+
+The public hot feed returned 24 games on 2026-10-07, and the SpawnJam hall of fame lists 228 winning games across 29 weekly jams.
+
+Primary source: https://www.spawn.co/api/feed?sort=hot (HTTP 200)
+
+| Game | Link | Page status |
+| --- | --- | --- |
+| Shoguns (samurai strategy, 14,267 plays) | [Shoguns](https://www.spawn.co/@gaba/shoguns/play) | 200 |
+| League of Spawn (5v5 lane battle, 9,553 plays) | [League of Spawn](https://www.spawn.co/@izkimar/league-of-spawn/play) | 200 |
+| Counter-Strike: Spawn (7,164 plays) | [Counter-Strike: Spawn](https://www.spawn.co/@smallzero/counter-strike-spawn/play) | 200 |
+| Dust 2 DM (deathmatch, 4,868 plays) | [Dust 2 DM](https://www.spawn.co/@tiger/dust-2-dm/play) | 200 |
+| Medieval Fate (3,047 plays) | [Medieval Fate](https://www.spawn.co/@poisoncode/medieval-fate/play) | 200 |
+| Portal Heist (2,782 plays) | [Portal Heist](https://www.spawn.co/@j/portal-heist/play) | 200 |
+| Call of Paint (1,087 plays) | [Call of Paint](https://www.spawn.co/@maine/call-of-paint/play) | 200 |
+| INKBLADE (1,005 plays) | [INKBLADE](https://www.spawn.co/@gfta/inkblade/play) | 200 |
+| Slimeling (196 plays) | [Slimeling](https://www.spawn.co/@guzz/slimeling/play) | 200 |
+| Almost Up! (SpawnJam #29 first place) | [Almost Up!](https://www.spawn.co/@medivhus/almost-up/play) | 200 |
+
 ## Genex
 
 The public gallery API returned 48 listings on 2026-10-07.
