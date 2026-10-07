@@ -148,6 +148,19 @@ Primary source: https://websim.com/sitemap.xml (HTTP 200) · [what is Websim](ht
 | Infinite Cave Sim | [Infinite Cave Sim](https://websim.com/@SilverXP/infinite-cave-sim) | 200 |
 | Addicted To Shapes | [Addicted To Shapes](https://websim.com/@datboodiebreadham/DootDootLoot) | 200 |
 | Sandspiel | [Sandspiel](https://websim.com/@maxbittker/sandspiel) | 200 |
+## Berrry Computer
+
+The app store listed 7,895 generated apps on 2026-10-08, of which 1,863 carry the game tag. The games below are verified playable in the browser.
+
+Primary source: https://berrry.app/apps (HTTP 200) · [about](https://berrry.app/about)
+
+| Game | Link | Page status |
+| --- | --- | --- |
+| Ultimate Country Simulator | [Ultimate Country Simulator](https://country-simulator.berrry.app) | 200 |
+| BEAMRACER-8 | [BEAMRACER-8](https://beamracer-8-fantasy-scanline.berrry.app) | 200 |
+| Flipside: Turn-Based Tactics | [Flipside](https://flipside.berrry.app) | 200 |
+| FPV Billiards | [FPV Billiards](https://fpvbilliards.berrry.app) | 200 |
+| Battle City: Web Port | [Battle City](https://battle-city.berrry.app) | 200 |
 ## Genex
 
 The public gallery API returned 48 listings on 2026-10-07.
