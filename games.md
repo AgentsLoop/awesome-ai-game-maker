@@ -127,6 +127,13 @@ Primary source: https://the9bit.com/sitemap.xml (HTTP 200)
 | The9 AI Game, build 3b4856a9 | [build 3b4856a9](https://the9bit.com/play/3b4856a9-4381-465f-a2c1-2d305ace9be4) | 200 |
 | The9 AI Game, build 50542221 | [build 50542221](https://the9bit.com/play/50542221-017a-4f5c-a48e-6c5c2af8b042) | 200 |
 
+## Klorv
+
+No published game catalogue was found on 2026-10-07. The product and features pages describe AI generation, a device-frame preview, one-click publishing, and analytics, but list no example games.
+
+Primary source: https://www.klorv.com/features (HTTP 200)
+
+No published example games were found.
 ## Genex
 
 The public gallery API returned 48 listings on 2026-10-07.

@@ -13,6 +13,7 @@ Keep tool entries separate from playable-game datasets such as [awesome-opus-5.5
 - [Compare game-creation tools](#compare-game-creation-tools)
 - [Feature checklist](#feature-checklist)
 - [Games built with these tools](#games-built-with-these-tools)
+- [Mobile game makers and store publishing](#mobile-game-makers-and-store-publishing)
 - [World models and real-time generation](#world-models-and-real-time-generation)
 - [Open-source generators and studios](#open-source-game-generators-and-studios--2026-10-04)
 - [Local agent workflow](#local-agent-workflow--2026-09-27)
@@ -32,6 +33,7 @@ Keep tool entries separate from playable-game datasets such as [awesome-opus-5.5
 | [Mindblown](https://mindblown.ai/) | Prompt-to-playable studio | A bot builds browser games from chat messages; remix a published game or tap "make one like this". The model is undisclosed; the vendor is Snark AI. | Play instantly in the browser; share links, likes, remixes, leaderboards, and multiplayer rooms. | No code is needed; no source or GitHub export was found. | Free to play and build with a 10M-token allowance, then paid. [Product](https://mindblown.ai/) · [make](https://mindblown.ai/make) · [example game](https://mindblown.ai/games/lofi-bird) · [game API](https://api.mindblown.ai/games/lofi-bird) |
 | [Spawn](https://www.spawn.co/) | Prompt-to-playable multiplayer studio | Describe the game in chat, and Savi, powered by Claude Opus 5.5 by default, builds it as a 2D, 3D, or mixed world. | Play in the browser, share a play link, and publish in one click; worlds are multiplayer from the start, with desktop apps and a phone browser. | Edit the game files and saved history, clone the world source over git, and bring your own coding agent; no ready-to-run Steam or native export. | Free to create and play with Savi included; some worlds carry age gates, and generated assets may not be unique to your game. [Product](https://www.spawn.co/) · [FAQ](https://www.spawn.co/about/faq) · [agent guide](https://www.spawn.co/llms.txt) · [feed API](https://www.spawn.co/api/feed?sort=hot) |
 | [the9bit](https://the9bit.com/) | Prompt-to-playable studio with creator payouts | Describe a game in the create page and generate it; the studio tracks drafts, published builds, and analytics. | Play in the browser through /play/ links; the site lists a shop, balance, and payout wallet for creators. | No export or source-download workflow is documented. | The site advertises a first-game reward and an AI-native production platform; treat pricing, payout, and export terms as unverified until an account confirms them. [Product](https://the9bit.com/) · [create](https://the9bit.com/create-game) · [sitemap](https://the9bit.com/sitemap.xml) |
+| [Klorv](https://www.klorv.com/) | Mobile prompt-to-playable studio | Describe the game in plain language; the site states Klorv writes the code and previews the build in a device frame. | Claims iOS, Android, and web builds from one project, with submission to the App Store and Play Store or a public link. | Advertises GitHub sync with private repositories and an EAS publishing pipeline; no public code export or game gallery was verified. | Vendor claims only: no public game gallery, pricing, or independent store listing was verified. [Product](https://www.klorv.com/) · [features](https://www.klorv.com/features) |
 | [Gamly](https://gamly.app/create) | Prompt-to-playable studio (waitlist) | Advertises prompt-to-game generation and iterative prompting. | Advertises web play and publishing. | Advertises source access and web, iOS, Android, and desktop exports. | The creator page currently requests a waitlist signup; treat the creation and export features as unverified until access is available. [Creator page](https://gamly.app/create) |
 | [Summer Engine](https://www.summerengine.com/) | AI-assisted engine | Draft scenes, scripts, input, and mechanics through conversation in a Godot-compatible desktop engine; GDScript, C++, and C# are supported, with MCP and CLI workflows. | Advertises Summer Games and other launch destinations. | Code stays editable; advertises desktop, mobile, Steam, and console exports. | macOS and Windows downloads are offered; verify each export target before relying on it. [Product](https://www.summerengine.com/) · [workflow](https://www.summerengine.com/blog/creating-games-using-ai) |
 | [GDevelop AI Agent](https://gdevelop.io/) | AI-assisted engine | Ask the agent to create or modify objects, events, and behaviors in an existing 2D or 3D project; it is not a one-prompt whole-game button. | Preview and publish through gd.games and other destinations. | JavaScript extensibility; export for web, desktop, and mobile. | AI credits and some publishing options vary by plan. [AI Agent guide](https://gdevelop.io/blog/make-games-with-ai-agent-gdevelop-automated-prompt) · [features and export](https://gdevelop.io/features) |
@@ -45,14 +47,14 @@ Keep tool entries separate from playable-game datasets such as [awesome-opus-5.5
 
 Scan the columns in the same order as the comparison table.
 
-| Checklist | Pixelfork | Rosebud | Makko | PocketByte | Wanaka | Mindblown | Spawn | the9bit | Gamly | Summer | GDevelop | Buildbox 4 | Genex | OmGithub | Exists | SpawnForge |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Prompt-to-game | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ✅ | ◐ | ◐ | — | ◐ | ◐ | ◐ |
-| AI editing / iteration | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ◐ | ✅ | ✅ | ✅ | ◐ assets only | ✅ | ◐ | ◐ |
-| Browser play / share | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ◐ | ✅ | ? | ✅ | ✅ | ◐ | ◐ |
-| Community remix | ✅ | ✅ | ? | ✅ | ✅ | ✅ | ◐ | ? | ? | ? | ? | ? | ✅ | ✅ | ? | ? |
-| Readable / editable source | ✅ | ✅ | ? | ? | ? | — | ✅ | ? | ◐ | ✅ | ✅ | ? | — external project | ✅ | ? | ◐ |
-| Native game export | ✅ Android | ◐ Windows | ? | ? | ? | — | — | ? | ◐ | ◐ | ✅ | ◐ | — web publishing | ? | ? | ◐ ZIP/PWA |
+| Checklist | Pixelfork | Rosebud | Makko | PocketByte | Wanaka | Mindblown | Spawn | the9bit | Klorv | Gamly | Summer | GDevelop | Buildbox 4 | Genex | OmGithub | Exists | SpawnForge |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Prompt-to-game | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ✅ | ◐ | ◐ | — | ◐ | ◐ | ◐ |
+| AI editing / iteration | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ◐ | ◐ | ✅ | ✅ | ✅ | ◐ assets only | ✅ | ◐ | ◐ |
+| Browser play / share | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ◐ | ◐ | ◐ | ✅ | ? | ✅ | ✅ | ◐ | ◐ |
+| Community remix | ✅ | ✅ | ? | ✅ | ✅ | ✅ | ◐ | ? | ? | ? | ? | ? | ? | ✅ | ✅ | ? | ? |
+| Readable / editable source | ✅ | ✅ | ? | ? | ? | — | ✅ | ? | ? | ◐ | ✅ | ✅ | ? | — external project | ✅ | ? | ◐ |
+| Native game export | ✅ Android | ◐ Windows | ? | ? | ? | — | — | ? | ◐ | ◐ | ◐ | ✅ | ◐ | — web publishing | ? | ? | ◐ ZIP/PWA |
 
 **Checklist key:** ✅ explicitly documented; ◐ limited, advertised, or unverified; ? not established by the reviewed evidence; — not offered by the tool or handled by an external project. Treat OmGithub as a project studio and catalog rather than a game engine. Treat Genex as an asset and publishing service, not a game generator. Treat Gamly, Exists, and SpawnForge as limited-access products; do not present their advertised output as verified. Treat the9bit as limited evidence: the site publishes generated builds but no per-game titles, pricing, or export terms.
 
@@ -68,6 +70,7 @@ Count published games from each tool's own gallery, then link a few named exampl
 | Mindblown | 100 game pages in the sitemap | [Lofi Bird](https://mindblown.ai/games/lofi-bird), [Ashen Isle Roguevania](https://mindblown.ai/games/ashen-isle-roguevania), [Starward Dominion](https://mindblown.ai/games/starward-dominion) | [mindblown.ai](https://mindblown.ai/sitemap.xml) |
 | Spawn | 24 games in the public hot feed; 228 jam-winning games | [Shoguns](https://www.spawn.co/@gaba/shoguns/play), [League of Spawn](https://www.spawn.co/@izkimar/league-of-spawn/play), [Dust 2 DM](https://www.spawn.co/@tiger/dust-2-dm/play) | [www.spawn.co](https://www.spawn.co/api/feed?sort=hot) |
 | the9bit | 25 playable builds in the site sitemap; game titles are not published | [build 40e85123](https://the9bit.com/play/40e85123-0d31-44df-85f0-7ff5102dfc05), [build 2cf55670](https://the9bit.com/play/2cf55670-2e33-4f8c-91ff-5311401c9fe5), [build 02bdb037](https://the9bit.com/play/02bdb037-87a2-41b2-bdba-c3adc66964a7) | [the9bit.com](https://the9bit.com/sitemap.xml) |
+| Klorv | none published; the site lists no game gallery | none found | [www.klorv.com](https://www.klorv.com/) |
 | Genex | 48 gallery listings | [Lost Cathedral](https://lost-cathedral.genex.technology/), [Stick & Steel · The Splinter Pit](https://stick-steel.genex.technology/), [SKATE](https://skate.genex.technology/) | [api.genex.games](https://api.genex.games/api/gallery?limit=48) |
 | OmGithub | 109 published project pages in the sitemap | [Claude of Duty](https://omgithub.com/mshumer/claude-of-duty), [Claude of Tanks](https://omgithub.com/kevin-liu-01/claude-of-tanks), [Coro Solto](https://omgithub.com/corosolto/client) | [omgithub.com](https://omgithub.com/sitemap.xml) |
 | Wanaka | 6 community showcase topics with playable builds | [osu! (lazer) replica](https://community.wanaka.app/t/16), [Brotato replica](https://community.wanaka.app/t/14), [Stellar Night Agency (otome)](https://community.wanaka.app/t/12) | [community.wanaka.app](https://community.wanaka.app/c/game-showcase/5) |
@@ -79,6 +82,22 @@ Count published games from each tool's own gallery, then link a few named exampl
 | SpawnForge | none found | none found | [www.spawnforge.ai](https://www.spawnforge.ai/) |
 | Exists | none found | none found | [exists.ai](https://exists.ai/) |
 
+## Mobile game makers and store publishing
+
+Compare tools that ship games to Google Play and the App Store here. Both stores review builds, so treat one-click publishing as a vendor claim and budget the accounts below.
+
+| Tool | What it makes | Store route | Access and limits | Primary evidence |
+| --- | --- | --- | --- | --- |
+| Klorv | Mobile-first prompt-to-game studio: the site states it writes the code, builds the game, and previews it in a device frame. | Claims iOS, Android, and web builds from one project and one-click submission to the App Store and Play Store through a built-in EAS pipeline. | Vendor claim with no public game gallery; GitHub sync, private repositories, and analytics are advertised. | [klorv.com](https://www.klorv.com/) · [features](https://www.klorv.com/features) |
+| Summer Engine | AI engine that builds a mobile game from a description, with portrait layout and touch controls. | Exports to Android and iOS; the vendor states you publish on Google Play and the App Store under your own developer account with no royalties, and that iOS still needs an Apple Developer account. | Desktop app for Windows and macOS; no store listing was verified here. | [Mobile page](https://www.summerengine.com/ai-mobile-game-maker) |
+| GDevelop AI Agent | Open-source engine where the agent creates or edits project features. | One-click packaging to Android, including the AAB format Google Play requires, and one-click iOS packaging tied to your Apple Developer account. | The documentation covers packaging steps rather than automatic store submission. | [Android docs](https://wiki.gdevelop.io/gdevelop5/publishing/android/) · [iOS docs](https://wiki.gdevelop.io/gdevelop5/publishing/ios/) |
+| Buildbox 4 | Visual editor with AI scene, asset, and node assistance. | Mobile export targets are documented across the Buildbox line, and vendor posts cover Android improvements. | The Buildbox 4 announcement presents a Windows-first editor; confirm current Android and iOS export support for each project. | [Announcement](https://www.buildbox.com/buildbox-4-is-now-available-make-games-with-ai/) |
+| FlutterFlow | AI-assisted Flutter app builder. | Documented Google Play and App Store deployment flows, including build numbers and code export. | It builds apps first, so a game must be app-shaped; no game-specific gallery is published. | [Play docs](https://docs.flutterflow.io/deployment/google-playstore-deployment/) · [App Store docs](https://docs.flutterflow.io/deployment/apple-app-store-deployment/) |
+
+Store accounts:
+
+- Google Play charges a one-time US$25 registration fee. See the [Play Console guide](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
+- The Apple Developer Program costs US$99 per year. See [Apple Developer Program](https://developer.apple.com/programs/).
 ## World models and real-time generation
 
 These systems generate an interactive world frame by frame instead of assembling a traditional engine. Treat them as research and open-source projects rather than studios: none publishes a game catalogue, and most need GPU hardware and code to run.
@@ -132,6 +151,7 @@ Record why a tool stays out, so the same candidates are not re-litigated and so 
 - Classify Genex as an asset-generation and publishing service, not as a game engine or complete-game generator; let the connected coding agent create the game logic.
 - Label pre-launch and unclear-access products explicitly.
 - Keep world models and assistant bridges out of the playable-game studio table; list them in their own section with the limits stated.
+- Confirm store accounts and review rules before promising a mobile release; a mobile export target is not a store approval.
 - Treat every capability above as a vendor or project claim, not an independent build or playtest. Recheck availability, exports, pricing, and licensing before recommending a tool for production.
 
 Check each vendor's access, pricing, licensing, and export limits before recommending it for production. Do not present advertised capability as an independent playtest. Check the existing product comparison on **2026-09-26** and the three added open-source projects on **2026-10-04**. Do not claim that a new account was used, that a generated game was created during this review, or that an export was independently tested.
